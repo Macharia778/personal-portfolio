@@ -293,3 +293,15 @@ display: flex;
                                             font-size: 16px;
                                             font-style: italic;
                                             color: #ccc;                 }
+
+                                            .Service{
+                                                display: flex;
+                                                height: 1000px;
+                                                background-color: #000000;
+
+                                            }
+                                            .description3{
+                                                color: white;
+                                                width: 500px;
+                                                padding: 100px ;
+                                            }
