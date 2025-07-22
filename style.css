@@ -472,3 +472,12 @@ height: 500px;
 background-color: #000000;
 
 }
+.blog{
+    background-color: #404240;
+}
+.articles-items{
+display: inline-flex;
+margin: auto;
+}
+
+
