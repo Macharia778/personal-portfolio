@@ -7,15 +7,12 @@
     <title>Pius Macharia | Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon-32x32.png">
-    <style>
-        /* Just for demo */
-        /* .spacer {
-      height: 1000px;
-      background: linear-gradient(white, #eee);
-    } */
-    </style>
+    <link href="https://fonts.googleapis.com/css?family=Barlow:400,500,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700" rel="stylesheet">
+    <link href="https://www.flaticon.com/free-icons/map-marker"rel="stylesheet">
+    <link  href="../../../webfonts/flaticon/flaticon.css" rel="stylesheet">
 </head>
 
 <body class="main-body">
@@ -340,10 +337,25 @@
         <p>Eros proin mus. Nascetur pharetra, venenatis neque est aliquet urna ac At netus amet morbi. Ipsum. Risus ante
             tincidunt
             enim.</p>
-        
+
         <div class="articles-items">
             <div class="article-images">
-                <img src="images/pius.jpg" alt="Logo" width="300" height="400" />
+                <div class="new"><img src="images/pius.jpg" class="zoom-img" alt="Logo" width="300" height="350" />
+                </div>
+
+                <p>
+                    By Admin
+                </p>
+                <p>
+                    House Power Protection
+                </p>
+                <p>
+                    Nov 02, 2018
+                </p>
+            </div>
+            <div class="article-images1">
+                <div class="new"><img src="images/pius.jpg" class="zoom-img" alt="Logo" width="300" height="350" />
+                </div>
                 <p>
                     By Admin
                 </p>
@@ -355,7 +367,8 @@
                 </p>
             </div>
             <div class="article-images">
-                <img src="images/pius.jpg" alt="Logo" width="300" height="400" />
+                <div class="new"><img src="images/pius.jpg" class="zoom-img" alt="Logo" width="300" height="350" />
+                </div>
                 <p>
                     By Admin
                 </p>
@@ -366,8 +379,9 @@
                     Nov 02, 2018
                 </p>
             </div>
-            <div class="article-images">
-                <img src="images/pius.jpg" alt="Logo" width="300" height="400" />
+            <div class="article-images1">
+                <div class="new"><img src="images/pius.jpg" class="zoom-img" alt="Logo" width="300" height="350" />
+                </div>
                 <p>
                     By Admin
                 </p>
@@ -378,39 +392,66 @@
                     Nov 02, 2018
                 </p>
             </div>
-            <div class="article-images">
-                <img src="images/pius.jpg" alt="Logo" width="300" height="400" />
-                <p>
-                    By Admin
-                </p>
-                <p>
-                    House Power Protection
-                </p>
-                <p>
-                    Nov 02, 2018
-                </p>
-            </div>
-            <!-- <div class="article-images">
-                <img src="images/pius.jpg" alt="Logo" width="300" height="400" />
-                <p>
-                    By Admin
-                </p>
-                <p>
-                    House Power Protection
-                </p>
-                <p>
-                    Nov 02, 2018
-                </p>
-            </div> -->
+
         </div>
     </section>
     <section class="contact">
-        <h6> Contact</h6>
-        <h1>Get In Touch</h1>
-        <p>Have some projects? Reach out through the following chanels</p>
         <div>
-
+            <h6> Contact</h6>
+            <h1>Get In Touch</h1>
+            <p>Have some projects? Reach out through the following chanels</p>
         </div>
+
+        <div>
+            <div class="contact-box">
+                <div class="icon-wrapper">
+                    <i class="flaticon-telephone"></i>
+                </div>
+                <div class="contact-info">
+                    <p><strong>Tel:</strong> +12 (3) 4567 899</p>
+                    <p><strong>Fax:</strong> +12 (3) 4567 445</p>
+                </div>
+            </div>
+            <div class="contact-box">
+                <div class="icon-wrapper">
+                    <i class="fas fa-map-marker"></i>
+                </div>
+                <div class="contact-info">
+                    <p>Themeforest, Envanto
+                    <br>
+                    24, Los Angeles, USA</p>
+                    <!-- <p><strong>Fax:</strong> +12 (3) 4567 445</p> -->
+                </div>
+            </div>
+            <div class="contact-box">
+                <div class="icon-wrapper">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="contact-info">
+                    <p>Sat–Fri: 8:00am–6:00pm</p>
+                    <p>Sunday: Closed</p>
+                </div>
+            </div>
+        </div>
+        <div class="message-form">
+<div class="details-containers">
+
+</div>
+        </div>
+            <form class="contact-form" action="https://formsubmit.co/your@email.com" method="POST">
+                <!-- <h2>Send a Message</h2> -->
+                <div class="detail-containers">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <textarea name="message" placeholder="Message" rows="5" columns="1" required></textarea>
+            
+                <button type="submit">Send Message</button>
+            </form>
+
+        
     </section>
 
     <script src="javascript.js"></script>

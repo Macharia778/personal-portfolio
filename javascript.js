@@ -26,16 +26,7 @@ window.addEventListener('scroll', () => {
 
     lastScrollY = currentScrollY;
 });
-//   const btn1 = document.getElementById("btn1");
-//   const btn2 = document.getElementById("btn2");
 
-//   function selectButton(selected, unselected) {
-//     selected.classList.add("selected");
-//     unselected.classList.remove("selected");
-//   }
-
-//   btn1.addEventListener("click", () => selectButton(btn1, btn2));
-// btn2.addEventListener("click", () => selectButton(btn2, btn1));
   
 const btn1 = document.getElementById("btn1");
   const btn2 = document.getElementById("btn2");

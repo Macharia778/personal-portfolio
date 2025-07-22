@@ -461,23 +461,134 @@ border: 5px solid coral;
     margin-right: 30px;
     margin-top: 10px;
 }
-.cont{
-    width: 800px;
-color: white;
-margin-left: 100px;
-}
-.contact{
-display: flex;
-height: 500px;
-background-color: #000000;
 
-}
 .blog{
     background-color: #404240;
 }
 .articles-items{
 display: inline-flex;
-margin: auto;
+/* margin: auto; */
+padding: 100px;
+
+}
+.article-images{
+    padding: 30px
+}
+.cont {
+    width: 800px;
+    color: white;
+    margin-left: 100px;
+}
+.contact {
+    display: grid;
+    height: fit-content;
+    background-color: #000000;
+color: #ffffff;
+text-align: center;
 }
 
+.new{
+    width: 300px;
+    height: auto;
+    overflow: hidden;
+}
+.zoom-img{
+transition: transform 0.4s ease;
 
+}
+.zoom-img:hover{
+    transform: scale(1.1);
+    
+}
+.contact-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 50px;
+    color: white;
+    font-style: italic;
+    /* background-color: #111; */
+    /* matches your dark theme */
+}
+
+/* Icon diamond shape */
+.icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: 2px solid #f46a0a;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(45deg);
+}
+
+.icon-wrapper i {
+    font-size: 25px;
+    color: #f46a0a;
+    transform: rotate(60deg);
+    /* rotate icon back */
+}
+
+/* Contact text */
+.contact-info p {
+    margin: 0;
+}
+.detail-containers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    row-gap: 10px;
+}
+.contact-form {
+    /* background-color: #1a1a1a; */
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    /* box-shadow: 0 0 15px rgba(255, 165, 0, 0.3); */
+    width: 1200px;
+    /* max-width: 400px; */
+
+}
+
+.contact-form h2 {
+    text-align: center;
+    color: orange;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: #222;
+    border: 1px solid #444;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+.contact-form button {
+    margin-top: 20px;
+    align-items: center;
+    width: 200px;
+    padding: 12px;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    color: #111;
+    font-weight: bold;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: rgb(168, 93, 1);
+}
