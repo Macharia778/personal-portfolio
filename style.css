@@ -1,7 +1,13 @@
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
 
-    margin: auto;
+    /* margin: auto; */
+    margin: 0;
+        padding: 0;
 }
 
 html {
@@ -333,8 +339,8 @@ td {
 }
 
 .Service {
-    display: flow-root;
-    height: 1300px;
+    display: grid;
+    height: fit-content;
     background-color: #000000;
 
 }
@@ -1327,4 +1333,22 @@ span {
 .footer {
     padding: 30px;
 
+}
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .Description {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
 }
