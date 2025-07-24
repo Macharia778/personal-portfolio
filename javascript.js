@@ -56,4 +56,19 @@ const btn1 = document.getElementById("btn1");
       });
     });
 
-    document.querySelectorAll('.descriptions').forEach(el => observer.observe(el));
+document.querySelectorAll('.descriptions').forEach(el => observer.observe(el));
+    (function() {
+    emailjs.init("_Xv2iH33U4iSSpdac"); // Replace with your actual public key
+  })();
+
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_2bg7a9p", "template_ikd27q2", this)
+      .then(function() {
+        alert("Message sent successfully!");
+      }, function(error) {
+        alert("Failed to send message. Try again.");
+        console.log(error);
+      });
+  });
