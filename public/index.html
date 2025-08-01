@@ -1,482 +1,89 @@
-<!DOcTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pius Macharia | Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="images/favicon-32x32.png">
-    <link href="https://fonts.googleapis.com/css?family=Barlow:400,500,600,700,800" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700" rel="stylesheet">
-    <link href="https://www.flaticon.com/free-icons/map-marker" rel="stylesheet">
-    <link href="../../../webfonts/flaticon/flaticon.css" rel="stylesheet">
-    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=person" />
-</head>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/12.0.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/12.0.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/12.0.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/12.0.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/12.0.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/12.0.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/12.0.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/12.0.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/12.0.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/12.0.0/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-<body class="main-body">
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="message">
+      <h2>Welcome</h2>
+      <h1>Firebase Hosting Setup Complete</h1>
+      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
+      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    </div>
+    <p id="load">Firebase SDK Loading&hellip;</p>
 
-    <header class="header" id="header">
-        <div class="container">
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
-            <nav class="nav"><img src="images/logo.png" alt="logo" class="offset-img">
-                <batton class="navbar-togller" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContaent" arial-controls=""></batton>
-                <div class="nav-list">
-
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#achievments">Achievments</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#service">Service</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-
-            </nav>
-
-        </div>
-    </header>
-    <section id="home">
-        <video class="video-bg" autoplay muted loop playsinline>
-            <source src="images/background animation.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="row">
-            <div class="personal-image"><img src="images/pius.jpg" alt="my image" style="height: 800px;"></div>
-            <div class="Description" class="background">
-                <h1 class="hello">Hello </h1>
-                <p class="description">I'am Pius, I am a passionate and detail-oriented individual with a strong
-                    interest in [your field, e.g., software development,
-                    graphic design, electronics, etc.]. With hands-on experience in projects that involve creativity,
-                    problem-solving, and
-                    collaboration, .</p>
-                <a href="#" class="btn-primary">More About Me</a>
-            </div>
-        </div>
-    </section>
-    <section class="about-section">
-        <div class="personal-image1"><img src="images/personal-image.jpg" alt="my image" style="height: 800px;" />
-
-            <div class="overlay-box">
-                <h1> About Me</h1>
-                <p>
-                    Fusce malesuada quis. Accumsan lectus sem. Gravida vehicula, sem amet leo dignissim aenean etiam
-                    lorem luctus pulvinar
-                    hendrerit hymenaeos nec purus porta hendrerit amet sapien feugiat, iaculis faucibus consequat class
-                    ornare vehicula
-                    massa non sapien duis. Quam duis. Proin eget sollicitudin nisl class mauris nascetur magnis a. Quam
-                    nec pellentesque
-                    luctus etiam ullamcorper facilisis nec scelerisque odio nunc mattis ullamcorper. Integer vivamus
-                    egestas turpis.
-
-                    Litora cursus ullamcorper magnis ipsum laoreet fringilla mi accumsan consequat quisque curabitur
-                    primis eget est
-                    penatibus feugiat, nunc pellentesque ultricies arcu, montes quis in.
-
-
-
-                </p>
-                <div class="spacer"></div>
-                <a href="#" class="btn-primary2">More About Me</a>
-            </div>
-        </div>
-        <div class="">
-
-
-
-        </div>
-    </section>
-    <section id="achievments" class="Achievments">
-        <div class="description2">
-            <h1 class="">Achievments</h1>
-            <p>In These Years</p>
-            <p>
-                Porttitor amet facilisi magnis iaculis suscipit leo feugiat. Nisi, dictum feugiat et suscipit curae;
-                habitasse ipsum
-                tellus lorem hymenaeos nunc suscipit vehicula iaculis eleifend nisl. Felis pharetra quam tellus lobortis
-                lacus
-                inceptos
-                arcu ultrices, fames ac congue hac augue dui lacinia nullam sociis vel, placerat. Congue imperdiet diam
-                turpis.</p>
-        </div>
-        <div class="success-container">
-            <table>
-                <tr>
-                    <td>
-                        <div class="circle-icon">
-                            <div class="icon"><i class="fas fa-clock"></i></div>
-                        </div>
-                        <div class="text">
-                            <div class="number">12</div>
-                            <div class="label">Years Of Success</div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="circle-icon">
-                            <div class="icon"><i class="fas fa-clock"></i></div>
-                        </div>
-                        <div class="text">
-                            <div class="number">12</div>
-                            <div class="label">Years Of Success</div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="circle-icon">
-                            <div class="icon"><i class="fas fa-clock"></i></div>
-                        </div>
-                        <div class="text">
-                            <div class="number">12</div>
-                            <div class="label">Years Of Success</div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="circle-icon">
-                            <div class="icon"><i class="fas fa-clock"></i></div>
-                        </div>
-                        <div class="text">
-                            <div class="number">12</div>
-                            <div class="label">Years Of Success</div>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-
-        </div>
-
-    </section>
-    <section id="service" class="Service">
-        <div class="description3">
-            <h3 class="d3.1">
-                Services
-            </h3>
-            <h1 class="d3.2">What I Do</h1>
-            <p class="d3.3">
-                Fermentum leo quisque sed Tellus sagittis Euismod habitant hac pede pellentesque etiam. Sem rhoncus
-                curae.
-            </p>
-
-        </div>
-        <div class="the-services">
-
-
-            <div class="grid-item"><i class="material-icons home">home</i>
-                <h3>CAD Designs</h3>
-                <p>Duis magnis Porta dictum maecenas oddio tellus posuere commodo at. Aliquam taciti. Egestas in
-                    litora. Purus sagittis
-                    suspendi.
-                    Duis magnis Porta dictum maecenas oddio tellus posuere commodo at. Aliquam taciti. Egestas
-                    in litora. Purus sagittis
-                    suspendi.</p>
-            </div>
-            <div class="grid-item"><i class="material-icons home">home</i>
-                <h3>CAD Designs</h3>
-                <p>Duis magnis Porta dictum maecenas oddio tellus posuere commodo at. Aliquam taciti. Egestas in
-                    litora. Purus sagittis
-                    suspendi.
-                    Duis magnis Porta dictum maecenas oddio tellus posuere commodo at. Aliquam taciti. Egestas
-                    in litora. Purus sagittis
-                    suspendi.</p>
-            </div>
-            <div class="grid-item"><i class="material-icons home">home</i>
-                <h3>CAD Designs</h3>
-                <p>Duis magnis Porta dictum maecenas oddio tellus posuere commodo at. Aliquam taciti. Egestas in
-                    litora. Purus sagittis
-                    suspendi.
-                    Duis magnis Porta dictum maecenas oddio tellus posuere commodo at. Aliquam taciti. Egestas
-                    in litora. Purus sagittis
-                    suspendi.</p>
-            </div>
-            <div class="grid-item"><i class="material-icons home">home</i>
-                <h3>CAD Designs</h3>
-                <p>Duis magnis Porta dictum maecenas oddio tellus posuere commodo at. Aliquam taciti. Egestas in
-                    litora. Purus sagittis
-                    suspendi.
-                    Duis magnis Porta dictum maecenas oddio tellus posuere commodo at. Aliquam taciti. Egestas
-                    in litora. Purus sagittis
-                    suspendi.</p>
-            </div>
-            <div class="grid-item"><i class="material-icons home">home</i>
-                <h3>CAD Designs</h3>
-                <p>Duis magnis Porta dictum maecenas oddio tellus posuere commodo at. Aliquam taciti. Egestas in
-                    litora. Purus sagittis
-                    suspendi.
-                    Duis magnis Porta dictum maecenas oddio tellus posuere commodo at. Aliquam taciti. Egestas
-                    in litora. Purus sagittis
-                    suspendi.</p>
-            </div>
-            <div class="grid-item"><i class="material-icons home">home</i>
-                <h3>CAD Designs</h3>
-                <p>Duis magnis Porta dictum maecenas oddio tellus posuere commodo at. Aliquam taciti. Egestas in
-                    litora. Purus sagittis
-                    suspendi.
-                    Duis magnis Porta dictum maecenas oddio tellus posuere commodo at. Aliquam taciti. Egestas
-                    in litora. Purus sagittis
-                    suspendi.</p>
-            </div>
-
-        </div>
-    </section>
-    <section id="education" class="education1">
-        <div class="description3">
-            <h3> Qualifications</h3>
-            <h1>Education and Experience</h1>
-            <p>Nascetur class sapien purus libero orci curabitur sodales, volutpat torquent risus sagittis et Nonummy
-                rhoncus et est.
-                Erat magna. Proin.</p>
-        </div>
-        <div class="education-experience">
-            <div class="button-group">
-                <button id="btn1" class="toggle-btn selected">Education</button>
-                <button id="btn2" class="toggle-btn">Experience</button>
-            </div>
-        </div>
-        <div id="Education" class="content active">
-            <div class="descriptions">
-                <div class="ribbon">Jan 1996 – Feb 2008</div>
-
-                <div class="cont">
-                    <h2>School Education</h2>
-                    <p>Jonior Harbad High School, Oraldo</p>
-                    <p>Aenean metus quisque mauris quisque nascetur platea aenean mattis, venenatis per sociis magna
-                        malesuada
-                        natoque.
-                        Vehicula. Sociis vulputate elit. Eleifend torquent. Ante senectus, sit vulputate elit etiam,
-                        massa. Aliquet
-                        aliquet
-                        ornare penatibus vulputate molestie mollis. Varius varius mus montes ullamcorper.</p>
-                </div>
-            </div>
-            <div class="descriptions">
-                <div class="ribbon">Jan 1996 – Feb 2008</div>
-
-                <div class="cont">
-                    <h2>School Education</h2>
-                    <p>Jonior Harbad High School, Oraldo</p>
-                    <p>Aenean metus quisque mauris quisque nascetur platea aenean mattis, venenatis per sociis magna
-                        malesuada
-                        natoque.
-                        Vehicula. Sociis vulputate elit. Eleifend torquent. Ante senectus, sit vulputate elit etiam,
-                        massa. Aliquet
-                        aliquet
-                        ornare penatibus vulputate molestie mollis. Varius varius mus montes ullamcorper.</p>
-                </div>
-            </div>
-            <div class="descriptions">
-                <div class="ribbon">Sep 1996 – Feb 2008</div>
-
-                <div class="cont">
-                    <h2>School Education</h2>
-                    <p>Jonior Harbad High School, Oraldo</p>
-                    <p>Aenean metus quisque mauris quisque nascetur platea aenean mattis, venenatis per sociis magna
-                        malesuada
-                        natoque.
-                        Vehicula. Sociis vulputate elit. Eleifend torquent. Ante senectus, sit vulputate elit etiam,
-                        massa. Aliquet
-                        aliquet
-                        ornare penatibus vulputate molestie mollis. Varius varius mus montes ullamcorper.</p>
-                </div>
-            </div>
-        </div>
-        <div id="Experience" class="content">
-            <div class="descriptions">
-
-                <div class="ribbon">Dec 1996 – Feb 2008</div>
-
-                <div class="cont">
-                    <h2>School Education</h2>
-                    <p>Jonior Harbad High School, Oraldo</p>
-                    <p>Aenean metus quisque mauris quisque nascetur platea aenean mattis, venenatis per sociis magna
-                        malesuada natoque.
-                        Vehicula. Sociis vulputate elit. Eleifend torquent. Ante senectus, sit vulputate elit etiam,
-                        massa. Aliquet aliquet
-                        ornare penatibus vulputate molestie mollis. Varius varius mus montes ullamcorper.</p>
-                </div>
-
-            </div>
-            <div class="descriptions">
-                <div class="ribbon">Feb 2025 – Aug 2008</div>
-
-                <div class="cont">
-                    <h2>School Education</h2>
-                    <p>Jonior Harbad High School, Oraldo</p>
-                    <p>Aenean metus quisque mauris quisque nascetur platea aenean mattis, venenatis per sociis magna
-                        malesuada
-                        natoque.
-                        Vehicula. Sociis vulputate elit. Eleifend torquent. Ante senectus, sit vulputate elit etiam,
-                        massa. Aliquet
-                        aliquet
-                        ornare penatibus vulputate molestie mollis. Varius varius mus montes ullamcorper.</p>
-                </div>
-            </div>
-            <div class="descriptions">
-                <div class="ribbon">Jan 1996 – Feb 2008</div>
-
-                <div class="cont">
-                    <h2>School Education</h2>
-                    <p>Jonior Harbad High School, Oraldo</p>
-                    <p>Aenean metus quisque mauris quisque nascetur platea aenean mattis, venenatis per sociis magna
-                        malesuada
-                        natoque.
-                        Vehicula. Sociis vulputate elit. Eleifend torquent. Ante senectus, sit vulputate elit etiam,
-                        massa. Aliquet
-                        aliquet
-                        ornare penatibus vulputate molestie mollis. Varius varius mus montes ullamcorper.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="blog" class="blog">
-        <div class="description6">
-            <h3 class="">What's New?</h3>
-            <h1>Recent Articles</h1>
-            <p>Eros proin mus. Nascetur pharetra, venenatis neque est aliquet urna ac At netus amet morbi. Ipsum. Risus
-                ante
-                tincidunt
-                enim.</p>
-        </div>
-        <div class="articles-items">
-            <div class="article-images">
-                <div class="new"><img src="images/pius.jpg" class="zoom-img" alt="Logo" width="300" height="350" />
-                </div>
-
-                <p>
-                    By Admin
-                </p>
-                <p>
-                    House Power Protection
-                </p>
-                <p>
-                    Nov 02, 2018
-                </p>
-            </div>
-            <div class="article-images1">
-                <div class="new"><img src="images/pius.jpg" class="zoom-img" alt="Logo" width="300" height="350" />
-                </div>
-                <p>
-                    By Admin
-                </p>
-                <p>
-                    House Power Protection
-                </p>
-                <p>
-                    Nov 02, 2018
-                </p>
-            </div>
-            <div class="article-images">
-                <div class="new"><img src="images/pius.jpg" class="zoom-img" alt="Logo" width="300" height="350" />
-                </div>
-                <p>
-                    By Admin
-                </p>
-                <p>
-                    House Power Protection
-                </p>
-                <p>
-                    Nov 02, 2018
-                </p>
-            </div>
-            <div class="article-images1">
-                <div class="new"><img src="images/pius.jpg" class="zoom-img" alt="Logo" width="300" height="350" />
-                </div>
-                <p>
-                    By Admin
-                </p>
-                <p>
-                    House Power Protection
-                </p>
-                <p>
-                    Nov 02, 2018
-                </p>
-            </div>
-
-        </div>
-        <div class="view-more">
-            <a href="#" class="btn-primary">View more articles</a>
-            <!-- <button>View More</button> -->
-        </div>
-    </section>
-    <section id="contact" class="contact">
-        <div>
-            <h6> Contact</h6>
-            <h1>Get In Touch</h1>
-            <p>Have some projects? Reach out through the following chanels</p>
-        </div>
-
-        <div>
-            <div class="contact-box">
-                <div class="icon-wrapper">
-                    <i class="material-icons">phone</i>
-                    <!-- <i class="flaticon-telephone"></i> -->
-                </div>
-                <div class="contact-info">
-                    <p><strong>Tel:</strong> +12 (3) 4567 899</p>
-                    <p><strong>Fax:</strong> +12 (3) 4567 445</p>
-                </div>
-            </div>
-            <div class="contact-box">
-                <div class="icon-wrapper">
-                    <span class="material-icons">
-                        pin_drop
-                    </span>
-                    <!-- <i class="fas fa-map-marker"></i> -->
-                </div>
-                <div class="contact-info">
-                    <p>Themeforest, Envanto
-                        <br>
-                        24, Los Angeles, USA
-                    </p>
-                    <!-- <p><strong>Fax:</strong> +12 (3) 4567 445</p> -->
-                </div>
-            </div>
-            <div class="contact-box">
-                <div class="icon-wrapper">
-                    <i class="fas fa-user"></i>
-                </div>
-                <div class="contact-info">
-                    <p>Sat–Fri: 8:00am–6:00pm</p>
-                    <p>Sunday: Closed</p>
-                </div>
-            </div>
-        </div>
-        <div class="message-form">
-            <div class="details-containers">
-
-            </div>
-        </div>
-        <form class="contact-form" action="https://formsubmit.co/bimalover9@gmail.com" method="POST">
-            <!-- <h2>Send a Message</h2> -->
-            <div class="detail-containers">
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="text" name="phone" placeholder="Phone" required>
-                <input type="text" name="subject" placeholder="Subject" required>
-            </div>
-            <textarea name="message" placeholder="Message" rows="5" columns="1" required></textarea>
-
-            <button type="submit">Send Message</button>
-        </form>
-
-        <div class="socials">
-            <ul class="list1">
-                <li class="list-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                <li class="list-item"><a href="#"><i class="fab fa-whatsapp"></i></a></li>
-                <li class="list-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-            </ul>
-        </div>
-        <div class="divider"></div>
-<div class="footer">
-    <p>© 2025 Pius Macharia. All Rights Resurved </p>
-</div>
-    </section>
-
-    <script src="javascript.js"></script>
-
-
-</body>
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
+</html>
