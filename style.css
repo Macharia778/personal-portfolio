@@ -1226,7 +1226,7 @@ margin-left: 200px;
   display: grid;
   height: fit-content;
   background-color: #000000;
-  color: #ffffff;
+  
   text-align: center;
 }
 
@@ -1254,7 +1254,13 @@ margin-left: 200px;
   /* background-color: #111; */
   /* matches your dark theme */
 }
-
+.description6 h6 {
+  padding-top: 30px;
+  
+  color: rgb(133, 66, 66);
+  width: 50%;
+  /* padding-right: 30px; */
+}
 /* Icon diamond shape */
 .icon-wrapper {
   width: 60px;
@@ -1279,6 +1285,7 @@ span {
 /* Contact text */
 .contact-info p {
   margin: 0;
+  
 }
 
 .detail-containers {
