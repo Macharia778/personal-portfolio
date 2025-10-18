@@ -103,24 +103,46 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
   });
 
   
+  // const btn1 = document.getElementById("btn1");
+  // const btn2 = document.getElementById("btn2");
+  // const education = document.getElementById("Education");
+  // const experience = document.getElementById("Experience");
+
+  // btn1.addEventListener("click", () => {
+  //   btn1.classList.add("selected");
+  //   btn2.classList.remove("selected");
+  //   education.classList.add("active");
+  //   experience.classList.remove("active");
+  // });
+
+  // btn2.addEventListener("click", () => {
+  //   btn2.classList.add("selected");
+  //   btn1.classList.remove("selected");
+  //   experience.classList.add("active");
+  //   education.classList.remove("active");
+  // });
   const btn1 = document.getElementById("btn1");
-  const btn2 = document.getElementById("btn2");
-  const education = document.getElementById("Education");
-  const experience = document.getElementById("Experience");
+    const btn2 = document.getElementById("btn2");
+    const education = document.getElementById("Education");
+    const experience = document.getElementById("Experience");
 
-  btn1.addEventListener("click", () => {
-    btn1.classList.add("selected");
-    btn2.classList.remove("selected");
-    education.classList.add("active");
-    experience.classList.remove("active");
-  });
+    btn1.addEventListener("click", () => {
+      btn1.classList.add("selected");
+      btn2.classList.remove("selected");
+      education.classList.add("active");
+      education.classList.add("show");
+      experience.classList.remove("active");
+      experience.classList.remove("show");
+    });
 
-  btn2.addEventListener("click", () => {
-    btn2.classList.add("selected");
-    btn1.classList.remove("selected");
-    experience.classList.add("active");
-    education.classList.remove("active");
-  });
+    btn2.addEventListener("click", () => {
+      btn2.classList.add("selected");
+      btn1.classList.remove("selected");
+      experience.classList.add("active");
+      experience.classList.add("show");
+      education.classList.remove("active");
+      education.classList.remove("show");
+    });
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -141,7 +163,7 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
 
     emailjs.sendForm("service_2bg7a9p", "template_ikd27q2", this)
       .then(function () {
-        alert("Message sent successfully!");
+       windows.alert("Message sent successfully!");
       }, function (error) {
         alert("Failed to send message. Try again.");
         console.log(error);
